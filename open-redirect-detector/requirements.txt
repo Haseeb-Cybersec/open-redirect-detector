@@ -1,0 +1,11 @@
+# open-redirect-detector — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# HTTP client — sends detection probes
+requests>=2.31.0
+
+# Anthropic Claude API — AI-assisted analysis (optional feature)
+anthropic>=0.25.0
+
+# Local test server — run test_server.py for local lab testing (optional)
+flask>=3.0.0

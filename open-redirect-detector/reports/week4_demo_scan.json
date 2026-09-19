@@ -1,0 +1,976 @@
+{
+  "tool": "Open Redirect Detector",
+  "version": "1.0.0",
+  "author": "Haseeb — IMSciences, Peshawar",
+  "generated": "2026-09-13 08:41:05 UTC",
+  "summary": {
+    "HIGH": 10,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "INFO": 0,
+    "SAFE": 40
+  },
+  "findings": [
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?url=https://open-redirect-canary.invalid",
+      "param": "url",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?redirect=https://open-redirect-canary.invalid",
+      "param": "redirect",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?next=https://open-redirect-canary.invalid",
+      "param": "next",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?return=https://open-redirect-canary.invalid",
+      "param": "return",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?returnUrl=https://open-redirect-canary.invalid",
+      "param": "returnUrl",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?return_url=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "return_url",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?goto=https://open-redirect-canary.invalid",
+      "param": "goto",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?dest=https://open-redirect-canary.invalid",
+      "param": "dest",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?to=https://open-redirect-canary.invalid",
+      "param": "to",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?target=https://open-redirect-canary.invalid",
+      "param": "target",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?callback=https://open-redirect-canary.invalid",
+      "param": "callback",
+      "payload": "https://open-redirect-canary.invalid",
+      "status_code": 302,
+      "location": "https://open-redirect-canary.invalid",
+      "body_snippet": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"https://open-redirect-canary.invalid\">https://open-redirect-canary.invalid</a>. If not, click the link.\n",
+      "vulnerable": true,
+      "detection_type": "location_header",
+      "payload_tier": 1,
+      "severity": "HIGH",
+      "evidence": "HTTP 302 redirect with Location: https://open-redirect-canary.invalid — server redirected to canary domain.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?return_to=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "return_to",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?link=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "link",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?forward=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "forward",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?redir=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "redir",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?destination=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "destination",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?ref=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "ref",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?redirectUrl=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "redirectUrl",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?nextUrl=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "nextUrl",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?go=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "go",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?jump=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "jump",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?continue=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "continue",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?redirect_uri=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "redirect_uri",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?after_login_url=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "after_login_url",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/vulnerable",
+      "test_url": "http://127.0.0.1:5056/redirect/vulnerable?success_url=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "success_url",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?url=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "url",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 403,
+      "location": "",
+      "body_snippet": "<h3>Redirect Blocked</h3><p>Destination <code>https://open-redirect-canary.invalid/path?ref=lab</code> is not in the allowed list.</p><p>Allowed: example.com, localhost, myapp.local</p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 403. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?redirect=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "redirect",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 403,
+      "location": "",
+      "body_snippet": "<h3>Redirect Blocked</h3><p>Destination <code>https://open-redirect-canary.invalid/path?ref=lab</code> is not in the allowed list.</p><p>Allowed: example.com, localhost, myapp.local</p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 403. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?next=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "next",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?return=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "return",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?returnUrl=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "returnUrl",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?return_url=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "return_url",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?goto=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "goto",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?dest=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "dest",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?to=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "to",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?target=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "target",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?callback=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "callback",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?return_to=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "return_to",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?link=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "link",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?forward=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "forward",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?redir=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "redir",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?destination=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "destination",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?ref=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "ref",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?redirectUrl=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "redirectUrl",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?nextUrl=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "nextUrl",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?go=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "go",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?jump=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "jump",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?continue=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "continue",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?redirect_uri=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "redirect_uri",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?after_login_url=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "after_login_url",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    },
+    {
+      "base_url": "http://127.0.0.1:5056/redirect/safe",
+      "test_url": "http://127.0.0.1:5056/redirect/safe?success_url=https://open-redirect-canary.invalid/path?ref=lab",
+      "param": "success_url",
+      "payload": "https://open-redirect-canary.invalid/path?ref=lab",
+      "status_code": 400,
+      "location": "",
+      "body_snippet": "<h3>Missing redirect parameter</h3><p>Try: <code>?url=https://example.com</code></p>",
+      "vulnerable": false,
+      "detection_type": null,
+      "payload_tier": null,
+      "severity": "INFO",
+      "evidence": "No open redirect. Status: 400. Location: none.",
+      "error": null,
+      "ai_analysis": {
+        "enabled": false,
+        "note": "AI analysis not requested in this test run. Use --ai-analysis with ANTHROPIC_API_KEY to enable."
+      }
+    }
+  ],
+  "limitations": [
+    "Does NOT follow multi-hop redirect chains — only the first redirect is inspected.",
+    "JavaScript-based redirects in Single-Page Applications (SPAs) may be missed; the tool reads the initial HTML but does not execute JavaScript.",
+    "POST-based redirects are not tested — only GET parameters.",
+    "Authenticated endpoints (login-required) are skipped unless a session cookie is provided.",
+    "WAF or rate-limiting on the target may produce false negatives by blocking test requests.",
+    "Encoded or obfuscated payloads beyond the built-in set may bypass detection.",
+    "This tool confirms redirect behavior against a canary domain; it does NOT verify the full exploitability of each finding (e.g., whether a victim user would click the crafted link).",
+    "Results should always be manually verified before inclusion in a security report."
+  ],
+  "authorization_note": "All tests were conducted exclusively against intentionally vulnerable lab applications (OWASP Juice Shop / DVWA / WebGoat or a custom local test server) operated in an authorized, isolated environment. No production or third-party systems were tested."
+}
